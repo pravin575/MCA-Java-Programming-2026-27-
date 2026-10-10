@@ -9,23 +9,23 @@ class PairSum {
 
         int[] arr = new int[n];
 
-        System.out.println("Enter " + n + " integers:");
+        System.out.println("Enter array elements:");
 
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
 
         System.out.print("Enter the target sum: ");
-        int target = sc.nextInt();
+        int sum = sc.nextInt();
+
+        System.out.println("Pairs whose sum is " + sum + ":");
 
         boolean found = false;
 
-        System.out.println("Pairs whose sum equals " + target + ":");
-
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
-                if (arr[i] + arr[j] == target) {
-                    System.out.println(arr[i] + " + " + arr[j] + " = " + target);
+                if (arr[i] + arr[j] == sum) {
+                    System.out.println(arr[i] + " + " + arr[j]);
                     found = true;
                 }
             }
@@ -40,16 +40,11 @@ class PairSum {
 }
 
 
+
 Enter the number of elements: 6
-Enter 6 integers:
-2
-4
-3
-5
-7
-1
-Enter the target sum: 6
-Pairs whose sum equals 6:
-2 + 4 = 6
-2 + 4 = 6
-5 + 1 = 6
+Enter array elements:
+2 4 3 5 7 8
+Enter the target sum: 10
+Pairs whose sum is 10:
+2 + 8
+3 + 7
